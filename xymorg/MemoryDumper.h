@@ -144,7 +144,7 @@ constexpr auto DUMP_LINE		= "%04lx: %s  %s :%s %s";
 			char			szMsg[512] = {};													//  Generic message buffer
 
 			//  Show start of the dump message
-			sprintf_s(szMsg, 512, START_DUMP, szSymbol, unsigned long(iLen), unsigned long(iLen), lpMem);
+			sprintf_s(szMsg, 512, START_DUMP, szSymbol, (unsigned long)(iLen), (unsigned long)(iLen), lpMem);
 			while (strlen(szMsg) < 75)
 			{
 				strcat_s(szMsg, 512, "-");
@@ -200,7 +200,7 @@ constexpr auto DUMP_LINE		= "%04lx: %s  %s :%s %s";
 					LocalBfrPtr++;
 				}
 				//  Format the dump line
-				sprintf_s(szMsg, 512, DUMP_LINE, unsigned long(iOffset), szHexSeg1, szHexSeg2, szRawSeg1, szRawSeg2);
+				sprintf_s(szMsg, 512, DUMP_LINE, (unsigned long)(iOffset), szHexSeg1, szHexSeg2, szRawSeg1, szRawSeg2);
 				os << szMsg << std::endl;
 
 				//  Position to the next chunk of the memory block
@@ -211,7 +211,7 @@ constexpr auto DUMP_LINE		= "%04lx: %s  %s :%s %s";
 			}
 
 			//  Show the end of the dump in the log
-			sprintf_s(szMsg, 512, END_DUMP, szSymbol, unsigned long(iLen), unsigned long(iLen), lpMem);
+			sprintf_s(szMsg, 512, END_DUMP, szSymbol, (unsigned long)(iLen), (unsigned long)(iLen), lpMem);
 			while (strlen(szMsg) < 75)
 			{
 				strcat_s(szMsg, 512, "-");
@@ -256,7 +256,7 @@ constexpr auto DUMP_LINE		= "%04lx: %s  %s :%s %s";
 			BYTE*			LocalBfrPtr = nullptr;												//  Pointer into the local buffer
 
 			//  Show start of the dump message
-			sprintf_s(szMsg, 512, START_DUMP, szSymbol, unsigned long(iLen), unsigned long(iLen), lpMem);
+			sprintf_s(szMsg, 512, START_DUMP, szSymbol, (unsigned long)(iLen), (unsigned long)(iLen), lpMem);
 			while (strlen(szMsg) < 75)
 			{
 				strcat_s(szMsg, 512, "-");
@@ -312,7 +312,7 @@ constexpr auto DUMP_LINE		= "%04lx: %s  %s :%s %s";
 					LocalBfrPtr++;
 				}
 				//  Format the dump line
-				sprintf_s(szMsg, 512, DUMP_LINE, unsigned long(iOffset + iOff), szHexSeg1, szHexSeg2, szRawSeg1, szRawSeg2);
+				sprintf_s(szMsg, 512, DUMP_LINE, (unsigned long)(iOffset + iOff), szHexSeg1, szHexSeg2, szRawSeg1, szRawSeg2);
 				os << szMsg << std::endl;
 
 				//  Position to the next chunk of the memory block
@@ -323,7 +323,7 @@ constexpr auto DUMP_LINE		= "%04lx: %s  %s :%s %s";
 			}
 
 			//  Show the end of the dump in the log
-			sprintf_s(szMsg, 512, END_DUMP, szSymbol, unsigned long(iLen), unsigned long(iLen), lpMem);
+			sprintf_s(szMsg, 512, END_DUMP, szSymbol, (unsigned long)(iLen), (unsigned long)(iLen), lpMem);
 			while (strlen(szMsg) < 75)
 			{
 				strcat_s(szMsg, 512, "-");

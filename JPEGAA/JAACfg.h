@@ -276,7 +276,7 @@ private:
 			Log << "ERROR: The base image name <baseimage> name supplied is invalid." << std::endl;
 			return false;
 		}
-		if (_strcmpi(pScan, ".gif") != 0) {
+		if (_stricmp(pScan, ".gif") != 0) {
 			Log << "ERROR: The base image name <baseimage> name supplied is unacceptable, it must be a GIF image." << std::endl;
 			return false;
 		}
@@ -420,7 +420,7 @@ private:
 			Log << "ERROR: The base image name <baseimage> name supplied is invalid." << std::endl;
 			return;
 		}
-		if (_strcmpi(pScan, ".gif") != 0) {
+		if (_stricmp(pScan, ".gif") != 0) {
 			Log << "ERROR: The base image name <baseimage> name supplied is unacceptable, it must be a GIF image." << std::endl;
 			return;
 		}
