@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--- Application configuration for the JPEG cycle experiment -->
+<config app="JPEGAA">
+    <jaa cycles="30">
+        <images>images</images>
+        <baseimage>images/CIMG-2X3.gif</baseimage>
+    </jaa>
+</config>
